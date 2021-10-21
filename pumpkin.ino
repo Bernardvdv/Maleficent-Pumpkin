@@ -2,14 +2,10 @@
 #include <WebServer.h>
 #include <ArduinoJson.h>
 #include <Adafruit_NeoPixel.h>
-#include <HTTPClient.h>
 
 // Variables
 #define RING_PIN 15
-#define NUMPIXELS 12
-#define MOTION_PIN 6
-
-String response;
+#define NUMPIXELS 24
 
 // Web server running on port 80
 WebServer server(80);
@@ -42,7 +38,7 @@ void connectToWiFi() {
 
 void setup_routing() {
   server.on("/motion", motionOn);
-  server.on("/ringoff", ringOff); 
+  server.on("/ringoff", ringOff);
   // start server
   server.begin();
 }
@@ -99,23 +95,4 @@ void setup() {
 void loop() 
 {
   server.handleClient();
-  HTTPClient http;
-  //The API URL
-  String serverName = "http://bernard:Taniam072@192.168.1.106:1880/endpoint/test";
-  bool isDetected = digitalRead(MOTION_PIN);
-  delay(50);
-  const char* motion;
-  motion = "off";
-  if (isDetected) {
-    Serial.print("Motion Detected");
-    motion = "on";
-  }
-
-  //Start the request
-  http.begin(serverName + "?temperature=" + motion);
-  //Use HTTP GET request
-  delay(5000);
-  http.GET();
-  //Response from server
-  response = http.getString();
 }
