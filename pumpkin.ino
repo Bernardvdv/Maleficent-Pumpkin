@@ -65,8 +65,16 @@ void motionOn() {
     // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
     pixels.setPixelColor(i, pixels.Color(255, 255, 0)); // Moderately bright green color.
     pixels.show(); // This sends the updated pixel color to the hardware.
+  }
+  delay(5000); // Delay for a period of time (in milliseconds).
+  for(int i=0;i<NUMPIXELS;i++)
+  {
+    // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
+    pixels.setPixelColor(i, pixels.Color(64, 0, 0)); // Moderately bright red color.
+    pixels.show(); // This sends the updated pixel color to the hardware.
     //    delay(delayval); // Delay for a period of time (in milliseconds).
   }
+
   create_json("Fan Status", 1, "Running");
   server.send(200, "application/json", buffer);
 }
