@@ -88,6 +88,12 @@ binary_sensor:
     device_class: motion
 ```
 
+***Porch Light Config***
+
+To enable access to the porch light in Node-Red, the standard porch light was replaced with a Kasa Smart Bulb and configured through the Kasa integration
+
+More information can be found at https://www.home-assistant.io/integrations/tplink/
+
 #### Automation ####
 
 In order to enable the motion sensor to trigger the events, a flow needs to be configured in Node-Red. 
@@ -99,10 +105,10 @@ Below is a visual example of the flow
 
 ![flow](https://user-images.githubusercontent.com/18738275/139308031-9d19dc17-3cef-4fa1-89f6-7b2722da2537.JPG)
 
-
 Because we are using Home Assistant with ESPHome integration, the motion sensor will become available as an entity in Node-Red. 
 This entity will be used in the first node name Motion On in the visual.
 
+Below is a brief description of all the nodes used.
 
 | Node  | Description |
 | ------------- | ------------- |
