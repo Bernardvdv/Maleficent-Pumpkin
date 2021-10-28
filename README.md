@@ -5,7 +5,7 @@ Which started out as an interest to understand how addressable LED's work, the i
 sounds and porch lights changing colour.
 
 In order to keep my interest, interesting, I decided to used various different types of technology. The eyes and backlight are configured with C++ using Arduino 
-libraries and for the motion sensor, I flashed an ESP32 with ESPHome firmware which integrates seamlesly with Home Assistant.
+libraries. The motion sensor is connected to a ESP32, flashed with ESPHome firmware which integrates seamlesly with Home Assistant.
 
 What is Home Assistant?
 
