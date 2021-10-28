@@ -20,4 +20,5 @@
 #### Hardware Installation ####
 
 	1. Solder the jumperwires to the Neopixel ring as per the example below 
-	![image](https://user-images.githubusercontent.com/18738275/139215877-c5c61c55-5da9-475c-af9e-4df34b436f05.png)
+	![image](https://user-images.githubusercontent.com/18738275/139216322-377f1baa-dcc2-4f82-b0f7-d8fbd45642f7.png)
+
