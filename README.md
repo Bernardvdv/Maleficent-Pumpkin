@@ -78,7 +78,7 @@ const char *PWD = "ENTER_WIFI_PASSWORD_HERE";
 
 More information about ESPHome can be found at this URL https://esphome.io/guides/getting_started_hassio.html
 
-Below Configuration can be used for the motion sensor
+Below Configuration can be added to the config yml file to enable use of the motion sensor
 
 ```js
 binary_sensor:
