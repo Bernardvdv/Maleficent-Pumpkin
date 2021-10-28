@@ -75,3 +75,15 @@ const char *PWD = "ENTER_WIFI_PASSWORD_HERE";
 3.	Upload the sketch and confirm via the serial monitor if the device succesfully connected to the defined SSID
 	
 ***ESPHome Config***
+
+More information about ESPHome can be found at this URL https://esphome.io/guides/getting_started_hassio.html
+
+Below Configuration can be used for the motion sensor
+
+```js
+binary_sensor:
+  - platform: gpio
+    pin: GPIO27
+    name: "Pumpkin Motion"
+    device_class: motion
+```js
