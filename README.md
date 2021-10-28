@@ -86,4 +86,4 @@ binary_sensor:
     pin: GPIO27
     name: "Pumpkin Motion"
     device_class: motion
-```js
+```
