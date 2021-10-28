@@ -35,7 +35,6 @@ void connectToWiFi() {
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
-    // we can even make the ESP32 to sleep
   }
 
   Serial.print("Connected. IP: ");
@@ -74,7 +73,7 @@ void motionOn() {
   for(int i=0;i<NUMPIXELS;i++)
   {
     // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
-    pixels.setPixelColor(i, pixels.Color(255, 0, 0)); // Red.
+    pixels.setPixelColor(i, pixels.Color(255, 0, 0)); // Red
     pixels.show(); // This sends the updated pixel color to the hardware.
     delay(wait_in_between_led);
   }
@@ -83,40 +82,36 @@ void motionOn() {
   {
     // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
     pixels.setPixelColor(i, pixels.Color(255,165,0)); // Orange.
-    pixels.show(); // This sends the updated pixel color to the hardware.
+    pixels.show();
     delay(wait_in_between_led);
-  }
-  delay(5000); // Delay for a period of time (in milliseconds).
-  for(int i=0;i<NUMPIXELS;i++)
-  {
-    // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
-    pixels.setPixelColor(i, pixels.Color(0,255,0)); // Moderately bright green color.
-    pixels.show(); // This sends the updated pixel color to the hardware.
-    delay(wait_in_between_led); // Delay for a period of time (in milliseconds).
   }
   delay(5000);
   for(int i=0;i<NUMPIXELS;i++)
   {
-    // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
-    pixels.setPixelColor(i, pixels.Color(255,255,255)); // green color.
-    pixels.show(); // This sends the updated pixel color to the hardware.
-    delay(wait_in_between_led); // Delay for a period of time (in milliseconds).
+    pixels.setPixelColor(i, pixels.Color(0,255,0)); // Green
+    pixels.show();
+    delay(wait_in_between_led);
+  }
+  delay(5000);
+  for(int i=0;i<NUMPIXELS;i++)
+  {
+    pixels.setPixelColor(i, pixels.Color(255,255,255)); // green.
+    pixels.show();
+    delay(wait_in_between_led);
   }
 
   for(int i=0;i<NUMPIXELS;i++)
   {
-    // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
     pixels.setPixelColor(i, pixels.Color(255, 0, 0)); // Red.
-    pixels.show(); // This sends the updated pixel color to the hardware.
+    pixels.show();
     delay(wait_in_between_led);
   }
   delay(10000);;
   for(int i=0;i<NUMPIXELS;i++)
   {
-    // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
-    pixels.setPixelColor(i, pixels.Color(0,0,0)); // green color.
-    pixels.show(); // This sends the updated pixel color to the hardware.
-    delay(wait_in_between_led); // Delay for a period of time (in milliseconds).
+    pixels.setPixelColor(i, pixels.Color(0,0,0)); // off 
+    pixels.show();
+    delay(wait_in_between_led);
   }
 
   create_json("Ring Status", 1, "Running");
@@ -128,9 +123,8 @@ void ringOff() {
   for(int i=0;i<NUMPIXELS;i++)
   {
     // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
-    pixels.setPixelColor(i, pixels.Color(0, 0, 0)); // Moderately bright green color.
-    pixels.show(); // This sends the updated pixel color to the hardware.
-    //    delay(delayval); // Delay for a period of time (in milliseconds).
+    pixels.setPixelColor(i, pixels.Color(0, 0, 0));
+    pixels.show();
   }
   create_json("Ring Status", 0, "Stopped");
   server.send(200, "application/json", buffer);
