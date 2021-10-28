@@ -39,32 +39,32 @@
 1.	Assuming Arduino IDE is already installed, connect the LILYGO® TTGO T-Lion ESP32-WROVER to the computer
 2.	Enter wifi credentials in the SSID and PWD field as seen in below code snippet
 	<pre><code>#include <WiFi.h>
-#include <WebServer.h>
-#include <ArduinoJson.h>
-#include <Adafruit_NeoPixel.h>
+<pre><code>#include <WebServer.h>
+<pre><code>#include <ArduinoJson.h>
+<pre><code>#include <Adafruit_NeoPixel.h>
 
-// Variables
-#define RING_PIN 15
-#define STRIP_PIN 2
-#define NUMPIXELS 24
-#define NUMPIXELSSTRIP 8
+<pre><code>// Variables
+<pre><code>#define RING_PIN 15
+<pre><code>#define STRIP_PIN 2
+<pre><code>#define NUMPIXELS 24
+<pre><code>#define NUMPIXELSSTRIP 8
 
-int wait_in_between_led = 20;
+<pre><code>int wait_in_between_led = 20;
 
-// Web server running on port 80
-WebServer server(80);
+<pre><code>// Web server running on port 80
+<pre><code>WebServer server(80);
 
-// JSON data buffer
-StaticJsonDocument<250> jsonDocument;
-char buffer[250];
-
-//LED Ring Init
-Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, RING_PIN, NEO_GRB + NEO_KHZ800);
-
+<pre><code>// JSON data buffer
+<pre><code>StaticJsonDocument<250> jsonDocument;
+<pre><code>char buffer[250];
+<pre><code>
+<pre><code>//LED Ring Init
+<pre><code>Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, RING_PIN, NEO_GRB + NEO_KHZ800);
+<pre><code>
 Adafruit_NeoPixel pixels_strip = Adafruit_NeoPixel(NUMPIXELSSTRIP, STRIP_PIN, NEO_GRB + NEO_KHZ800);
 
-const char *SSID = "ENTER_SSID_HERE";
-const char *PWD = "ENTER_WIFI_PASSWORD_HERE";
-</pre></code>
+<pre><code>const char *SSID = "ENTER_SSID_HERE";
+<pre><code>const char *PWD = "ENTER_WIFI_PASSWORD_HERE";
+
 	
 
