@@ -84,7 +84,7 @@ binary_sensor:
 
 ***Porch Light Config***
 
-To enable access to the porch light in Node-Red, the standard porch light was replaced with a Kasa Smart Bulb and configured through the Kasa integration which will 
+To enable access to the porch light in Node-Red, the standard light was replaced with a Kasa Smart Bulb and configured through the Kasa integration which will 
 make the light available as an entity in Node-Red.
 
 More information can be found at https://www.home-assistant.io/integrations/tplink/
@@ -99,10 +99,11 @@ Below is a visual example of the flow.
 
 ![flow](https://user-images.githubusercontent.com/18738275/139308031-9d19dc17-3cef-4fa1-89f6-7b2722da2537.JPG)
 
-Because we are using Home Assistant with ESPHome integration, the motion sensor will become available as an entity in Node-Red. 
-This entity will be used in the first node name Motion On in the visual.
+Because we are using Home Assistant with ESP
+Home integration, the motion sensor will become available as an entity in Node-Red. 
+This entity will be used in the first node named Motion On in the visual.
 
-Below is a brief description of all the nodes used.
+Below is a brief description of all the nodes.
 
 | Node  | Description |
 | ------------- | ------------- |
@@ -114,3 +115,7 @@ Below is a brief description of all the nodes used.
 | Delay 55s | Delays the flow for the defined amount of seconds before executing the next node |
 | Porch Light On White | Adjusts the porch light back to white |
 
+Improvemets:
+*	Replaced the web server package with an asynchronous server to allow simultaneous requests and prevent code blocking
+*	Make the pumpkin talk? TTS with GPT-3? Maybe next year
+*	Move everything to a Pi Zero? Or less coding and run everything within ESPHome with a single ESPHome
