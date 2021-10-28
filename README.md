@@ -20,8 +20,10 @@
 
 #### Hardware Installation ####
 
-1.	 Below diagram demonstrates how to connect the LED's to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins
+1.	 Below diagram demonstrates how to connect the LED's to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins via the breadboard
+
 ![rings_con](https://user-images.githubusercontent.com/18738275/139256348-9b839687-4a4a-446c-91fb-d2a77f8a1234.jpg)
+
 *	Red = 5VDC
 *	Green = Ground
 *	Blue = Data
