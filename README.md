@@ -104,8 +104,13 @@ Because we are using Home Assistant with ESPHome integration, the motion sensor 
 This entity will be used in the first node name Motion On in the visual.
 
 
-| First Header  | Second Header |
+| Node  | Description |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  
+| Motion On | Polls the motion sensor for any state changes  |
+| Trigger 1 Min  | Will only send the first message if it matches the string and wait 1 min before sending another request |
+| Porch Light on Red | Adjusts the porch light to red with low brightness |
+| Rings On | Calls the endpoint on the LILYGO ESP to switch on the Adafruit Rings |
+| Cast Rob Zombie | Casts media defined in the Media URL field to the available device e.g. in this case a Google Home |
+| Delay 55s | Delays the flow for the defined amount of seconds before executing the next node |
+| Porch Light On White | Adjusts the porch light back to white |
 
