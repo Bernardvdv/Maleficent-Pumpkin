@@ -38,7 +38,8 @@
 #### Software Installation ####
 1.	Assuming Arduino IDE is already installed, connect the LILYGO® TTGO T-Lion ESP32-WROVER to the computer
 2.	Enter wifi credentials in the SSID and PWD field as seen in below code snippet
-	<pre><code>#include <WiFi.h>
+```js
+#include <WiFi.h>
 #include <WebServer.h>
 #include <ArduinoJson.h>
 #include <Adafruit_NeoPixel.h>
@@ -65,6 +66,6 @@ Adafruit_NeoPixel pixels_strip = Adafruit_NeoPixel(NUMPIXELSSTRIP, STRIP_PIN, NE
 
 const char *SSID = "ENTER_SSID_HERE";
 const char *PWD = "ENTER_WIFI_PASSWORD_HERE";
-
+```
 	
 
