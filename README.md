@@ -1,4 +1,4 @@
-# Pumpkin
+# Maleficent Pumpkin 
 
 #### Description ####
 Which started out as an interest to understand how addressable LED's work, the interest quickly evolved in a "smart" pumpkin idea with colour changing eyes, creepy 
