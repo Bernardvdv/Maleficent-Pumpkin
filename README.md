@@ -27,7 +27,8 @@
 ![stick](https://user-images.githubusercontent.com/18738275/139253722-446a7b0a-0dd9-4230-89f7-d38753adb4dd.jpg)
 
 	3. Connect the wires soldered to the Neopixel ring to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins as per the diagram below
-![rings_con](https://user-images.githubusercontent.com/18738275/139255132-b46fd9e1-8cc3-4eb1-9d63-83f6e0a8ace4.jpg)
+![rings_con](https://user-images.githubusercontent.com/18738275/139256348-9b839687-4a4a-446c-91fb-d2a77f8a1234.jpg)
+
 
 	4. Connect the wires soldered to the Neopixel stick to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins as per the diagram below
 	// add image
