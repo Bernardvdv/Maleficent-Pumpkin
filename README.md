@@ -99,8 +99,7 @@ Below is a visual example of the flow.
 
 ![flow](https://user-images.githubusercontent.com/18738275/139308031-9d19dc17-3cef-4fa1-89f6-7b2722da2537.JPG)
 
-Because we are using Home Assistant with ESP
-Home integration, the motion sensor will become available as an entity in Node-Red. 
+Because we are using Home Assistant with ESPHome integration, the motion sensor will become available as an entity in Node-Red. 
 This entity will be used in the first node named Motion On in the visual.
 
 Below is a brief description of all the nodes.
