@@ -28,7 +28,7 @@
 
 	3. Connect the jumper wires as per the below diagram to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins
 ![rings_con](https://user-images.githubusercontent.com/18738275/139256348-9b839687-4a4a-446c-91fb-d2a77f8a1234.jpg)
-*	Red = 5V
+*	Red = 5VDC
 *	Green = Ground
 *	Blue = Data
 
@@ -36,6 +36,34 @@
 	// add image
 	
 #### Software Installation ####
-	1. Assuming Arduino IDE is already installed, connect the LILYGO® TTGO T-Lion ESP32-WROVER to the computer via USB and upload the 
-	   pumpkin.ino sketch
+1.	Assuming Arduino IDE is already installed, connect the LILYGO® TTGO T-Lion ESP32-WROVER to the computer
+2.	Enter wifi credentials in the SSID and PWD field as seen in below code snippet
+	code(#include <WiFi.h>
+#include <WebServer.h>
+#include <ArduinoJson.h>
+#include <Adafruit_NeoPixel.h>
+
+// Variables
+#define RING_PIN 15
+#define STRIP_PIN 2
+#define NUMPIXELS 24
+#define NUMPIXELSSTRIP 8
+
+int wait_in_between_led = 20;
+
+// Web server running on port 80
+WebServer server(80);
+
+// JSON data buffer
+StaticJsonDocument<250> jsonDocument;
+char buffer[250];
+
+//LED Ring Init
+Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, RING_PIN, NEO_GRB + NEO_KHZ800);
+
+Adafruit_NeoPixel pixels_strip = Adafruit_NeoPixel(NUMPIXELSSTRIP, STRIP_PIN, NEO_GRB + NEO_KHZ800);
+
+const char *SSID = "ENTER_SSID_HERE";
+const char *PWD = "ENTER_WIFI_PASSWORD_HERE";)
+	
 
