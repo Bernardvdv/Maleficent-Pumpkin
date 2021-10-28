@@ -2,7 +2,7 @@
 
 #### Description ####
 Which started out as an interest to understand how addressable LED's work, the interest quickly evolved in a "smart" pumpkin idea with colour changing eyes, creepy 
-sounds played  and porch lights changing colour.
+sounds and porch lights changing colour.
 
 In order to keep my interest, interesting, I decided to used various different types of technology. The eyes and backlight are configured with C++ using Arduino 
 libraries and for the motion sensor, I flashed an ESP32 with ESPHome firmware which integrates seamlesly with Home Assistant.
