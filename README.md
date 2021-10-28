@@ -26,12 +26,12 @@
 	2. Solder the jumperwires to the Neopixel Stick as per the example below
 ![stick](https://user-images.githubusercontent.com/18738275/139253722-446a7b0a-0dd9-4230-89f7-d38753adb4dd.jpg)
 
-	3. Connect the wires soldered to the Neopixel ring to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins as per the diagram below
+	3. Connect the jumper wires as per the below diagram to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins
 ![rings_con](https://user-images.githubusercontent.com/18738275/139256348-9b839687-4a4a-446c-91fb-d2a77f8a1234.jpg)
+*	Red = 5V
+*	Green = Ground
+*	Blue = Data
 
-
-	4. Connect the wires soldered to the Neopixel stick to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins as per the diagram below
-	// add image
 	5. Connect the PIR motion sensor to the ESP-32S ESP32 Development Board as per the diagram below
 	// add image
 	
