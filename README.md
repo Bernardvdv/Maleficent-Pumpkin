@@ -24,7 +24,8 @@
 ![ring](https://user-images.githubusercontent.com/18738275/139252725-07899b87-e1be-4a13-8b11-579c8e1bfbaf.png)
 
 	2. Solder the jumperwires to the Neopixel Stick as per the example below
-	// add image
+![stick](https://user-images.githubusercontent.com/18738275/139253722-446a7b0a-0dd9-4230-89f7-d38753adb4dd.jpg)
+
 	3. Connect the wires soldered to the Neopixel ring to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins as per the diagram below
 	//add image
 	4. Connect the wires soldered to the Neopixel stick to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins as per the diagram below
