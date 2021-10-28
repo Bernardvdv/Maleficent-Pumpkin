@@ -5,7 +5,7 @@ Which started out as an interest to understand how addressable LED's work, the i
 sounds played  and porch lights changing colour.
 
 In order to keep my interest, interesting, I decided to used various different types of technology. The eyes and backlight are configured with C++ using Arduino 
-libraries and the motion sensor uses ESPHome firmware which integrates seamlesly with Home Assistant.
+libraries and for the motion sensor, I flashed an ESP32 with ESPHome firmware which integrates seamlesly with Home Assistant.
 
 What is Home Assistant?
 
@@ -28,7 +28,7 @@ More info can be found at https://nodered.org/
 *	Jumper Wires (https://thepihut.com/products/premium-female-male-extension-jumper-wires-40-x-12-300mm)
 *	Breadboard and no, not one from the kitchen :=) (https://thepihut.com/products/raspberry-pi-breadboard-half-size)
 *	Kasa Smart Bulb by TP-link (https://www.amazon.co.uk/gp/product/B07KXHDCVF/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
-*	Google Home Mini
+*	Google Nest Mini (https://store.google.com/gb/config/google_nest_mini?hl=en-GB)
 
 
 #### Software Required ####
