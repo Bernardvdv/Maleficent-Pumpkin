@@ -20,19 +20,67 @@
 
 #### Hardware Installation ####
 
-	1. Solder the jumperwires to the Neopixel ring as per the example below 
-![ring](https://user-images.githubusercontent.com/18738275/139252725-07899b87-e1be-4a13-8b11-579c8e1bfbaf.png)
+1.	 Below diagram demonstrates how to connect the LED's to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins via the breadboard
 
-	2. Solder the jumperwires to the Neopixel Stick as per the example below
-	// add image
-	3. Connect the wires soldered to the Neopixel ring to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins as per the diagram below
-	//add image
-	4. Connect the wires soldered to the Neopixel stick to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins as per the diagram below
-	// add image
-	5. Connect the PIR motion sensor to the ESP-32S ESP32 Development Board as per the diagram below
+![rings_con](https://user-images.githubusercontent.com/18738275/139256348-9b839687-4a4a-446c-91fb-d2a77f8a1234.jpg)
+
+*	Red = 5VDC
+*	Green = Ground
+*	Blue = Data
+
+
+2.	 Connect the PIR motion sensor to the ESP-32S ESP32 Development Board as per the diagram below
 	// add image
 	
 #### Software Installation ####
-	1. Assuming Arduino IDE is already installed, connect the LILYGO® TTGO T-Lion ESP32-WROVER to the computer via USB and upload the 
-	   pumpkin.ino sketch
 
+***Arduino Config***
+
+1.	Assuming Arduino IDE is already installed, connect the LILYGO® TTGO T-Lion ESP32-WROVER via USB
+2.	Enter wifi credentials in the SSID and PWD field as seen in below code snippet
+
+```js
+#include <WiFi.h>
+#include <WebServer.h>
+#include <ArduinoJson.h>
+#include <Adafruit_NeoPixel.h>
+
+// Variables
+#define RING_PIN 15
+#define STRIP_PIN 2
+#define NUMPIXELS 24
+#define NUMPIXELSSTRIP 8
+
+int wait_in_between_led = 20;
+
+// Web server running on port 80
+WebServer server(80);
+
+// JSON data buffer
+StaticJsonDocument<250> jsonDocument;
+char buffer[250];
+
+//LED Ring Init
+Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, RING_PIN, NEO_GRB + NEO_KHZ800);
+
+Adafruit_NeoPixel pixels_strip = Adafruit_NeoPixel(NUMPIXELSSTRIP, STRIP_PIN, NEO_GRB + NEO_KHZ800);
+
+const char *SSID = "ENTER_SSID_HERE";
+const char *PWD = "ENTER_WIFI_PASSWORD_HERE";
+```
+
+3.	Upload the sketch and confirm via the serial monitor if the device succesfully connected to the defined SSID
+	
+***ESPHome Config***
+
+More information about ESPHome can be found at https://esphome.io/guides/getting_started_hassio.html
+
+Below Configuration can be added to the config yml file to enable use of the motion sensor
+
+```js
+binary_sensor:
+  - platform: gpio
+    pin: GPIO27
+    name: "Pumpkin Motion"
+    device_class: motion
+```
