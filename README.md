@@ -30,12 +30,13 @@
 
 
 2.	 Connect the PIR motion sensor to the ESP-32S ESP32 Development Board as per the diagram below
+
 ![esp](https://user-images.githubusercontent.com/18738275/139305163-d7ccd194-0453-413f-b879-ce4612f592e3.png)
 
 	
 #### Software Installation ####
 
-***Arduino Config***
+***Adafruit Ring And Stick Config***
 
 1.	Assuming Arduino IDE is already installed, connect the LILYGO® TTGO T-Lion ESP32-WROVER via USB
 2.	Enter wifi credentials in the SSID and PWD field as seen in below code snippet
@@ -72,7 +73,7 @@ const char *PWD = "ENTER_WIFI_PASSWORD_HERE";
 
 3.	Upload the sketch and confirm via the serial monitor if the device succesfully connected to the defined SSID
 	
-***ESPHome Config***
+***Motion Sensor Config***
 
 More information about ESPHome can be found at https://esphome.io/guides/getting_started_hassio.html
 
@@ -85,3 +86,17 @@ binary_sensor:
     name: "Pumpkin Motion"
     device_class: motion
 ```
+
+#### Automation ####
+
+In order to enable the motion sensor to trigger the events, a flow needs to be configured in Node-Red. 
+More info regarding Node-Red can be found at https://nodered.org/
+
+To simplify the process, the flow.json can be imported in Node-Red which will automatically create all the nodes
+
+Below is a visual example of the flow
+
+![flow](https://user-images.githubusercontent.com/18738275/139308031-9d19dc17-3cef-4fa1-89f6-7b2722da2537.JPG)
+
+
+
