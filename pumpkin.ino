@@ -23,8 +23,8 @@ Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, RING_PIN, NEO_GRB + NEO_
 
 Adafruit_NeoPixel pixels_strip = Adafruit_NeoPixel(NUMPIXELSSTRIP, STRIP_PIN, NEO_GRB + NEO_KHZ800);
 
-const char *SSID = "Midian";
-const char *PWD = "0829688988#";
+const char *SSID = "";
+const char *PWD = "";
 
 void connectToWiFi() {
   Serial.print("Connecting to ");
