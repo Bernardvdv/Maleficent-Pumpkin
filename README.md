@@ -1,5 +1,23 @@
 # Pumpkin
 
+#### Description ####
+Which started out as an interest to understand how addressable LED's work, the interest quickly evolved in a "smart" pumpkin idea with colour changing eyes, creepy 
+sounds played  and porch lights changing colour.
+
+In order to keep my interest, interesting, I decided to used various different types of technology. The eyes and backlight are configured with C++ using Arduino 
+libraries and the motion sensor uses ESPHome firmware which integrates seamlesly with Home Assistant.
+
+What is Home Assistant?
+
+Home Assistant is a free and open-source software for home automation that is designed to be the central control system for smart home devices with focus on local control and privacy. More info can be found at https://www.home-assistant.io/
+
+To give the pumpkin a bit of personallity and for the motion sensor to trigger a string of events, it was a no brainer to use Node-Red for the automation.
+
+What is Node-Red?
+
+Node-RED is a flow-based development tool for visual programming developed originally by IBM for wiring together hardware devices, APIs and online services as part of the Internet of Things. Node-RED provides a web browser-based flow editor, which can be used to create JavaScript functions.
+
+More info can be found at https://nodered.org/
 
 #### Components Used ####
 *	NeoPixel Ring - 12 x 5050 RGB LED with Integrated Drivers x 2 (https://thepihut.com/products/adafruit-neopixel-ring-12-x-5050-rgb-led-with-integrated-drivers)
@@ -21,7 +39,7 @@
 
 #### Hardware Installation ####
 
-1.	 Below diagram demonstrates how to connect the LED's to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins via the breadboard
+1.	 Below diagram demonstrates how to connect the LED's to the LILYGO® TTGO T-Lion ESP32-WROVER GPIO pins via the breadboard.
 
 ![rings_con](https://user-images.githubusercontent.com/18738275/139256348-9b839687-4a4a-446c-91fb-d2a77f8a1234.jpg)
 
@@ -30,7 +48,7 @@
 *	Blue = Data
 
 
-2.	 Connect the PIR motion sensor to the ESP-32S ESP32 Development Board as per the diagram below
+2.	 Connect the PIR motion sensor to the ESP-32S ESP32 Development Board as per the diagram below.
 
 ![esp](https://user-images.githubusercontent.com/18738275/139305163-d7ccd194-0453-413f-b879-ce4612f592e3.png)
 
@@ -39,8 +57,8 @@
 
 ***Adafruit Ring And Stick Config***
 
-1.	Assuming Arduino IDE is already installed, connect the LILYGO® TTGO T-Lion ESP32-WROVER via USB
-2.	Enter wifi credentials in the SSID and PWD field as seen in below code snippet
+1.	Assuming Arduino IDE is already installed, connect the LILYGO® TTGO T-Lion ESP32-WROVER via USB.
+2.	Enter wifi credentials in the SSID and PWD field as seen in below code snippet.
 
 ```js
 #include <WiFi.h>
@@ -72,13 +90,13 @@ const char *SSID = "ENTER_SSID_HERE";
 const char *PWD = "ENTER_WIFI_PASSWORD_HERE";
 ```
 
-3.	Upload the sketch and confirm via the serial monitor if the device succesfully connected to the defined SSID
+3.	Upload the sketch and confirm via the serial monitor if the device succesfully connected to the defined SSID.
 	
 ***Motion Sensor Config***
 
-More information about ESPHome can be found at https://esphome.io/guides/getting_started_hassio.html
+More information about ESPHome can be found at https://esphome.io/guides/getting_started_hassio.html.
 
-Below Configuration can be added to the config yml file to enable use of the motion sensor
+Below Configuration can be added to the config yml file to enable use of the motion sensor.
 
 ```js
 binary_sensor:
@@ -90,18 +108,19 @@ binary_sensor:
 
 ***Porch Light Config***
 
-To enable access to the porch light in Node-Red, the standard porch light was replaced with a Kasa Smart Bulb and configured through the Kasa integration
+To enable access to the porch light in Node-Red, the standard porch light was replaced with a Kasa Smart Bulb and configured through the Kasa integration which will 
+make the light available as an entity in Node-Red.
 
 More information can be found at https://www.home-assistant.io/integrations/tplink/
 
 #### Automation ####
 
 In order to enable the motion sensor to trigger the events, a flow needs to be configured in Node-Red. 
-More info regarding Node-Red can be found at https://nodered.org/
+More info regarding Node-Red can be found at https://nodered.org/.
 
-To simplify the process, the flows.json can be imported in Node-Red which will automatically create all the required nodes
+To simplify the process, the flows.json can be imported in Node-Red which will automatically create all the required nodes.
 
-Below is a visual example of the flow
+Below is a visual example of the flow.
 
 ![flow](https://user-images.githubusercontent.com/18738275/139308031-9d19dc17-3cef-4fa1-89f6-7b2722da2537.JPG)
 
