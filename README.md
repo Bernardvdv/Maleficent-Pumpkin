@@ -15,7 +15,7 @@ To give the pumpkin a bit of personallity and for the motion sensor to trigger a
 
 What is Node-Red?
 
-Node-RED is a flow-based development tool for visual programming developed originally by IBM for wiring together hardware devices, APIs and online services as part of the Internet of Things. Node-RED provides a web browser-based flow editor, which can be used to create JavaScript functions.
+Node-Red is a flow-based development tool for visual programming developed originally by IBM for wiring together hardware devices, APIs and online services as part of the Internet of Things. Node-RED provides a web browser-based flow editor, which can be used to create JavaScript functions.
 
 More info can be found at https://nodered.org/
 
@@ -115,8 +115,7 @@ More information can be found at https://www.home-assistant.io/integrations/tpli
 
 #### Automation ####
 
-In order to enable the motion sensor to trigger the events, a flow needs to be configured in Node-Red. 
-More info regarding Node-Red can be found at https://nodered.org/.
+In order to enable the motion sensor to trigger the events, a flow needs to be configured in Node-Red.
 
 To simplify the process, the flows.json can be imported in Node-Red which will automatically create all the required nodes.
 
