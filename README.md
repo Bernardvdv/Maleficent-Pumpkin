@@ -58,7 +58,8 @@ More info can be found at https://nodered.org/
 ***Adafruit Ring And Stick Config***
 
 1.	Assuming Arduino IDE is already installed, connect the LILYGO® TTGO T-Lion ESP32-WROVER via USB.
-2.	Enter wifi credentials in the SSID and PWD field as seen in below code snippet.
+2.	Import the pumpkin.ino sketch into Arduino IDE
+3.	Enter wifi credentials in the SSID and PWD field as seen in below code snippet.
 
 ```js
 const char *SSID = "ENTER_SSID_HERE";
