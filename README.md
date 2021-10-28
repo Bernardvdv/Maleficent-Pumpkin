@@ -32,7 +32,7 @@
 *	Green = Ground
 *	Blue = Data
 
-	5. Connect the PIR motion sensor to the ESP-32S ESP32 Development Board as per the diagram below
+5. Connect the PIR motion sensor to the ESP-32S ESP32 Development Board as per the diagram below
 	// add image
 	
 #### Software Installation ####
