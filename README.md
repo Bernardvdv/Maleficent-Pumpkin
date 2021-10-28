@@ -32,5 +32,6 @@
 	// add image
 	
 #### Software Installation ####
-	1. Assuming Arduino IDE is already installed, connect the LILYGO® TTGO T-Lion ESP32-WROVER to the computer via USB and upload the pumpkin.ino sketch
+	1. Assuming Arduino IDE is already installed, connect the LILYGO® TTGO T-Lion ESP32-WROVER to the computer via USB and upload the 
+	   pumpkin.ino sketch
 
