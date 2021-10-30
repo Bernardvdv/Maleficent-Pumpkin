@@ -117,4 +117,4 @@ Below is a brief description of all the nodes.
 Improvemets:
 *	Replaced the web server package with an asynchronous server to allow simultaneous requests and prevent code blocking
 *	Make the pumpkin talk? TTS with GPT-3? Maybe next year
-*	Move everything to a Pi Zero? Or less coding and run everything within ESPHome with a single ESPHome
+*	Move everything to a Pi Zero? Or less coding and run everything within ESPHome with a single ESP controller 
